@@ -2,22 +2,22 @@ package com.fan.fansdirectionregulator;
 
 public class FansDirection {
 
-    private FDirection fDirection;
+    private FanDirectionRegulator fanDirectionRegulator;
 
     //default
     public FansDirection() {
-        fDirection = new ClockWiseDirection();
+        fanDirectionRegulator = new ClockWiseDirectionRegulator();
     }
 
-    public FansDirection(FDirection fDirection) {
-        this.fDirection = fDirection;
+    public FansDirection(FanDirectionRegulator fanDirectionRegulator) {
+        this.fanDirectionRegulator = fanDirectionRegulator;
     }
 
-    public FDirection getfDirection() {
-        return fDirection;
+    public FanDirectionRegulator getFanDirectionRegulator() {
+        return fanDirectionRegulator;
     }
 
-    public void setfDirection(FDirection fDirection) {
-        this.fDirection = fDirection;
+    public void setFanDirectionRegulator(FanDirectionRegulator fanDirectionRegulator) {
+        this.fanDirectionRegulator = fanDirectionRegulator;
     }
 }

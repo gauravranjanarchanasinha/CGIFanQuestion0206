@@ -1,6 +1,6 @@
 package com.unit.fan.fansdirectionregulator;
 
-import com.fan.fansdirectionregulator.AntiClockWiseDirection;
+import com.fan.fansdirectionregulator.AntiClockWiseDirectionRegulator;
 import com.fan.fansdirectionregulator.FansDirection;
 import com.fan.statustype.DirectionType;
 import org.junit.Test;
@@ -12,7 +12,7 @@ import java.util.Arrays;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class FDirectionTest {
+public class FanDirectionRegulatorTest {
 
     @Parameterized.Parameter(0)
     public String scenario;
@@ -32,14 +32,14 @@ public class FDirectionTest {
                                 new FansDirection(),
                                 DirectionType.ANTICLOCKWISE},
                         {"Fan State is Anticlockwise And Pull is performed",
-                                new FansDirection(new AntiClockWiseDirection()),
+                                new FansDirection(new AntiClockWiseDirectionRegulator()),
                                 DirectionType.CLOCKWISE}});
     }
 
     @Test
     public void pull() {
-        fansDirection.getfDirection().pull(fansDirection);
-        assertEquals(expectedDirectionType.getDescription(), fansDirection.getfDirection().getPresentState());
+        fansDirection.getFanDirectionRegulator().pull(fansDirection);
+        assertEquals(expectedDirectionType.getDescription(), fansDirection.getFanDirectionRegulator().getPresentState());
     }
 
 

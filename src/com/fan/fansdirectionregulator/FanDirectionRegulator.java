@@ -1,6 +1,6 @@
 package com.fan.fansdirectionregulator;
 
-public interface FDirection {
+public interface FanDirectionRegulator {
 
     String getPresentState();
 

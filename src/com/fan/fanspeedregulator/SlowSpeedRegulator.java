@@ -2,11 +2,11 @@ package com.fan.fanspeedregulator;
 
 import com.fan.statustype.SpeedType;
 
-public class SlowSpeed implements FSpeed {
+public class SlowSpeedRegulator implements FanSpeedRegulator {
 
     private SpeedType speedType;
 
-    public SlowSpeed() {
+    public SlowSpeedRegulator() {
         speedType = SpeedType.LOW;
     }
 
@@ -21,7 +21,7 @@ public class SlowSpeed implements FSpeed {
 
     @Override
     public void pull(FanSpeed fanSpeed) {
-        fanSpeed.setfSpeed(new MediumSpeed());
-        System.out.println(fanSpeed.getfSpeed().getPresentState());
+        fanSpeed.setFanSpeedRegulator(new MediumSpeedRegulator());
+        System.out.println(fanSpeed.getFanSpeedRegulator().getPresentState());
     }
 }

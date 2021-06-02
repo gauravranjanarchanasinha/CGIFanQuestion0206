@@ -1,6 +1,6 @@
 package com.fan.fanspeedregulator;
 
-public interface FSpeed {
+public interface FanSpeedRegulator {
     String getPresentState();
 
     void pull(FanSpeed fanSpeed);

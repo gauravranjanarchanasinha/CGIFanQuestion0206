@@ -2,12 +2,12 @@ package com.fan.fanspeedregulator;
 
 import com.fan.statustype.SpeedType;
 
-public class MediumSpeed implements FSpeed {
+public class HighSpeedRegulator implements FanSpeedRegulator {
 
     private SpeedType speedType;
 
-    public MediumSpeed() {
-        speedType = SpeedType.MEDIUM;
+    public HighSpeedRegulator() {
+        speedType = SpeedType.HIGH;
     }
 
     public SpeedType getSpeedType() {
@@ -21,7 +21,7 @@ public class MediumSpeed implements FSpeed {
 
     @Override
     public void pull(FanSpeed fanSpeed) {
-        fanSpeed.setfSpeed(new HighSpeed());
-        System.out.println(fanSpeed.getfSpeed().getPresentState());
+        fanSpeed.setFanSpeedRegulator(new OffSpeedRegulator());
+        System.out.println(fanSpeed.getFanSpeedRegulator().getPresentState());
     }
 }

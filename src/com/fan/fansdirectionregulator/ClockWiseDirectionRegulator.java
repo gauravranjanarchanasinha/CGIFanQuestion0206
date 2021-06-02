@@ -2,12 +2,12 @@ package com.fan.fansdirectionregulator;
 
 import com.fan.statustype.DirectionType;
 
-public class AntiClockWiseDirection implements FDirection {
+public class ClockWiseDirectionRegulator implements FanDirectionRegulator {
 
     private final DirectionType directionType;
 
-    public AntiClockWiseDirection() {
-        directionType = DirectionType.ANTICLOCKWISE;
+    ClockWiseDirectionRegulator() {
+        directionType = DirectionType.CLOCKWISE;
     }
 
     public DirectionType getDirectionType() {
@@ -21,7 +21,7 @@ public class AntiClockWiseDirection implements FDirection {
 
     @Override
     public void pull(FansDirection fanDirection) {
-        fanDirection.setfDirection(new ClockWiseDirection());
-        System.out.println(fanDirection.getfDirection().getPresentState());
+        fanDirection.setFanDirectionRegulator(new AntiClockWiseDirectionRegulator());
+        System.out.println(fanDirection.getFanDirectionRegulator().getPresentState());
     }
 }

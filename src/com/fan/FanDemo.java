@@ -14,16 +14,16 @@ public class FanDemo {
             System.out.println("Press 4 to exit");
             switch (sc.nextInt()) {
                 case 1:
-                    System.out.println(fan.getFansSpeed().getfSpeed().getPresentState());
-                    System.out.println(fan.getFansDirection().getfDirection().getPresentState());
+                    System.out.println(fan.getFansSpeed().getFanSpeedRegulator().getPresentState());
+                    System.out.println(fan.getFansDirection().getFanDirectionRegulator().getPresentState());
                     break;
                 case 2:
-                    fan.getFansSpeed().getfSpeed().pull(fan.getFansSpeed());
-                    System.out.println(fan.getFansDirection().getfDirection().getPresentState());
+                    fan.getFansSpeed().getFanSpeedRegulator().pull(fan.getFansSpeed());
+                    System.out.println(fan.getFansDirection().getFanDirectionRegulator().getPresentState());
                     break;
                 case 3:
-                    System.out.println(fan.getFansSpeed().getfSpeed().getPresentState());
-                    fan.getFansDirection().getfDirection().pull(fan.getFansDirection());
+                    System.out.println(fan.getFansSpeed().getFanSpeedRegulator().getPresentState());
+                    fan.getFansDirection().getFanDirectionRegulator().pull(fan.getFansDirection());
                     break;
                 default:
                     System.exit(0);

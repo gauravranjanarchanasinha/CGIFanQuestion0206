@@ -2,22 +2,22 @@ package com.fan.fanspeedregulator;
 
 public class FanSpeed {
 
-    private FSpeed fSpeed;
+    private FanSpeedRegulator fanSpeedRegulator;
 
     //default
     public FanSpeed() {
-        this.fSpeed = new OffSpeed();
+        this.fanSpeedRegulator = new OffSpeedRegulator();
     }
 
-    public FanSpeed(FSpeed fSpeed) {
-        this.fSpeed = fSpeed;
+    public FanSpeed(FanSpeedRegulator fanSpeedRegulator) {
+        this.fanSpeedRegulator = fanSpeedRegulator;
     }
 
-    public FSpeed getfSpeed() {
-        return fSpeed;
+    public FanSpeedRegulator getFanSpeedRegulator() {
+        return fanSpeedRegulator;
     }
 
-    public void setfSpeed(FSpeed fSpeed) {
-        this.fSpeed = fSpeed;
+    public void setFanSpeedRegulator(FanSpeedRegulator fanSpeedRegulator) {
+        this.fanSpeedRegulator = fanSpeedRegulator;
     }
 }
